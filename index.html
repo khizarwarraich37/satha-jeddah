@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AF Satha | Premium Towing & Recovery KSA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --accent: #d90429;
+            --gold: #efa00b;
+            --dark: #000000;
+            --card-bg: #111111;
+            --text-gray: #aaa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', 'Cairo', sans-serif; background: var(--dark); color: #fff; line-height: 1.6; }
+        
+        /* Lang Bar */
+        .lang-nav { background: #111; padding: 10px 10%; display: flex; justify-content: flex-end; gap: 20px; }
+        .lang-btn { background: none; border: 1px solid #444; color: #fff; padding: 5px 15px; cursor: pointer; border-radius: 4px; font-weight: bold; }
+
+        /* Hero */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), 
+                        url('WhatsApp Image 2026-04-26 at 11.38.32 PM (4).jpeg');
+            background-size: cover; background-position: center;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+        }
+
+        /* Information Sections */
+        .section-padding { padding: 80px 10%; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        
+        .info-card { background: var(--card-bg); padding: 40px; border-radius: 12px; border: 1px solid #222; text-align: center; }
+        .info-card i { font-size: 3rem; color: var(--accent); margin-bottom: 20px; }
+        .info-card h3 { margin-bottom: 15px; font-size: 1.5rem; }
+        .info-card p { color: var(--text-gray); }
+
+        /* Pricing Area */
+        .price-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; margin-top: 40px; }
+        .p-box { flex: 1; min-width: 280px; background: #1a1a1a; padding: 30px; border-top: 4px solid var(--gold); border-radius: 8px; }
+        .p-box h4 { font-size: 0.9rem; color: var(--text-gray); text-transform: uppercase; }
+        .p-box .val { font-size: 2rem; font-weight: 900; color: #fff; margin: 10px 0; }
+
+        /* Fleet Gallery */
+        .img-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 40px; }
+        .img-box { position: relative; height: 300px; border-radius: 8px; overflow: hidden; }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; }
+        .img-caption { position: absolute; bottom: 0; width: 100%; background: rgba(0,0,0,0.8); padding: 15px; text-align: center; }
+
+        /* Request Form */
+        .form-container { background: #111; padding: 50px; border-radius: 15px; max-width: 800px; margin: 0 auto; }
+        .form-container input { width: 100%; padding: 15px; margin-bottom: 15px; background: #222; border: 1px solid #333; color: #fff; }
+        .btn-wa { display: block; width: 100%; background: #25d366; color: #000; padding: 20px; text-align: center; font-weight: 900; text-decoration: none; border-radius: 5px; }
+
+        footer { text-align: center; padding: 40px; background: #050505; color: #555; }
+        [dir="rtl"] .lang-nav { justify-content: flex-start; }
+    </style>
+</head>
+<body dir="ltr">
+
+    <nav class="lang-nav">
+        <button class="lang-btn" onclick="setLang('en')">English</button>
+        <button class="lang-btn" onclick="setLang('ar')">العربية</button>
+    </nav>
+
+    <header class="hero">
+        <h1 id="t-hero" style="font-size: 3.5rem; font-weight: 900;">VIP <span style="color:var(--accent)">SATHA</span> JEDDAH</h1>
+        <p id="s-hero" style="font-size: 1.2rem; color: var(--gold);">Professional Car Recovery & Intercity Transport</p>
+    </header>
+
+    <section class="section-padding">
+        <h2 id="t-why" style="text-align: center; margin-bottom: 40px; font-size: 2.5rem;">Why Choose AF Satha?</h2>
+        <div class="grid">
+            <div class="info-card">
+                <i class="fa fa-bolt"></i>
+                <h3 id="c1-t">Fast Response</h3>
+                <p id="c1-p">We reach your location in Jeddah within 15-30 minutes, 24 hours a day.</p>
+            </div>
+            <div class="info-card">
+                <i class="fa fa-shield-check"></i>
+                <h3 id="c2-t">Safe Handling</h3>
+                <p id="c2-p">Specialized hydraulic flatbeds for luxury cars like Rolls Royce, Ferrari, and Lamborghini.</p>
+            </div>
+            <div class="info-card">
+                <i class="fa fa-map-location-dot"></i>
+                <h3 id="c3-t">Long Distance</h3>
+                <p id="c3-p">Reliable transport across KSA including Riyadh, Dammam, Makkah, and Madina.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: #080808;">
+        <h2 id="t-rates" style="text-align: center; margin-bottom: 10px;">Our Premium Rates</h2>
+        <div class="price-row">
+            <div class="p-box">
+                <h4 id="r1-t">Jeddah to Riyadh</h4>
+                <div class="val">5500 <small style="font-size: 1rem;">SAR</small></div>
+            </div>
+            <div class="p-box" style="border-top-color: var(--accent);">
+                <h4 id="r2-t">Riyadh to Dammam</h4>
+                <div class="val">6000 <small style="font-size: 1rem;">SAR</small></div>
+            </div>
+            <div class="p-box">
+                <h4 id="r3-t">Local (Intracity)</h4>
+                <div class="val" id="r3-v" style="font-size: 1.4rem;">Open for Discussion</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <h2 id="t-fleet" style="text-align: center; margin-bottom: 40px;">Our Specialized Fleet</h2>
+        <div class="img-grid">
+            <div class="img-box">
+                <img src="WhatsApp Image 2026-04-26 at 11.38.32 PM (3).jpeg" alt="Sports Car Satha">
+                <div class="img-caption" id="f1">Hydraulic Satha for Luxury Cars</div>
+            </div>
+            <div class="img-box">
+                <img src="WhatsApp Image 2026-04-26 at 11.38.32 PM (2).jpeg" alt="Covered Satha">
+                <div class="img-caption" id="f2">Covered VIP Transport</div>
+            </div>
+            <div class="img-box">
+                <img src="WhatsApp Image 2026-04-26 at 11.38.32 PM (1).jpeg" alt="Equipment Transport">
+                <div class="img-caption" id="f3">Heavy Machinery & Forklifts</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="quote">
+        <div class="form-container">
+            <h2 id="t-form" style="text-align: center; margin-bottom: 30px;">Get a Quote Now</h2>
+            <form id="waForm">
+                <input type="text" id="car" placeholder="Car Model (e.g. GMC, Lexus)" required>
+                <input type="text" id="from" placeholder="Pickup City/Area" required>
+                <input type="text" id="to" placeholder="Dropoff City/Area" required>
+                <button type="submit" style="border:none; width: 100%; cursor: pointer;">
+                    <a class="btn-wa"><i class="fab fa-whatsapp"></i> <span id="t-btn">REQUEST PRICE VIA WHATSAPP</span></a>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 AF Satha Recovery Services | Jeddah | Riyadh | Dammam | Makkah | Madina
+    </footer>
+
+    <script>
+        const content = {
+            en: {
+                hero: "VIP <span style='color:var(--accent)'>SATHA</span> JEDDAH", sub: "Professional Car Recovery & Intercity Transport",
+                why: "Why Choose AF Satha?", c1: "Fast Response", c1p: "We reach your location in Jeddah within 15-30 minutes, 24/7.",
+                c2: "Safe Handling", c2p: "Hydraulic flatbeds for luxury cars like Rolls Royce and Ferrari.",
+                c3: "Long Distance", c3p: "Reliable transport across KSA including Riyadh and Dammam.",
+                rates: "Our Premium Rates", r1: "Jeddah to Riyadh", r2: "Riyadh to Dammam", r3: "Local (Intracity)", r3v: "Open for Discussion",
+                fleet: "Our Specialized Fleet", f1: "Hydraulic Satha for Luxury Cars", f2: "Covered VIP Transport", f3: "Heavy Machinery & Forklifts",
+                form: "Get a Quote Now", btn: "REQUEST PRICE VIA WHATSAPP"
+            },
+            ar: {
+                hero: "<span>سطحة</span> هيدروليك بجدة", sub: "نقل سيارات فارهة وخدمات السحب بين المدن",
+                why: "لماذا تختار سطحة AF؟", c1: "استجابة سريعة", c1p: "نصل لموقعك في جدة خلال 15-30 دقيقة على مدار الساعة.",
+                c2: "تعامل آمن", c2p: "سطحات هيدروليك متخصصة للسيارات الفارهة والرياضية.",
+                c3: "مسافات طويلة", c3p: "نقل موثوق لكافة أنحاء المملكة بما في ذلك الرياض والدمام.",
+                rates: "أسعارنا المميزة", r1: "من جدة إلى الرياض", r2: "من الرياض إلى الدمام", r3: "داخل المدينة", r3v: "للتفاوض",
+                fleet: "أسطولنا المتخصص", f1: "سطحة هيدروليك للسيارات الفارهة", f2: "سطحة مغلقة VIP", f3: "نقل المعدات الثقيلة والرافعات",
+                form: "اطلب السعر الآن", btn: "اطلب السعر عبر الواتساب"
+            }
+        };
+
+        function setLang(lang) {
+            document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            document.getElementById('t-hero').innerHTML = content[lang].hero;
+            document.getElementById('s-hero').innerText = content[lang].sub;
+            document.getElementById('t-why').innerText = content[lang].why;
+            document.getElementById('c1-t').innerText = content[lang].c1;
+            document.getElementById('c1-p').innerText = content[lang].c1p;
+            document.getElementById('c2-t').innerText = content[lang].c2;
+            document.getElementById('c2-p').innerText = content[lang].c2p;
+            document.getElementById('c3-t').innerText = content[lang].c3;
+            document.getElementById('c3-p').innerText = content[lang].c3p;
+            document.getElementById('t-rates').innerText = content[lang].rates;
+            document.getElementById('r1-t').innerText = content[lang].r1;
+            document.getElementById('r2-t').innerText = content[lang].r2;
+            document.getElementById('r3-t').innerText = content[lang].r3;
+            document.getElementById('r3-v').innerText = content[lang].r3v;
+            document.getElementById('t-fleet').innerText = content[lang].fleet;
+            document.getElementById('f1').innerText = content[lang].f1;
+            document.getElementById('f2').innerText = content[lang].f2;
+            document.getElementById('f3').innerText = content[lang].f3;
+            document.getElementById('t-form').innerText = content[lang].form;
+            document.getElementById('t-btn').innerText = content[lang].btn;
+        }
+
+        document.getElementById('waForm').onsubmit = function(e) {
+            e.preventDefault();
+            const msg = `Quote Request:%0ACar: ${document.getElementById('car').value}%0APickup: ${document.getElementById('from').value}%0ADropoff: ${document.getElementById('to').value}`;
+            window.open(`https://wa.me/923003606134?text=${msg}`);
+        };
+    </script>
+</body>
+</html>
